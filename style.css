@@ -1,0 +1,197 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.datatype-fontastic {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: #e8321e;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+    width: 100%;
+  min-height: 100vh;
+  background: #e8321e;
+  color: #e8321e;
+}
+
+main {
+  margin: 0 auto;
+}
+/*
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+*/
+
+.container {
+    cursor: crosshair;
+    width: 100%;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    background-color: #e8321e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+    gap: 2px;
+}
+
+.row {
+    height: 33.33%;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+     /* add transitions for smooth change of the grid */
+}
+
+.grid-element {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-element-left p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    overflow: hidden;
+    background-color: #0ae45a;
+    background-size: 100% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.grid-element-center p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #0ae45a;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-element-right p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    overflow: hidden;
+    background-color: #0ae45a;
+    background-size: 100% 100%;
+    background-position: right;
+    background-repeat: no-repeat;   
+}
+
+p {
+    font-size: clamp(2rem, min(100cqw, 100cqh), 30rem);
+    font-weight: 100;
+    line-height: 1;
+    display: flex;
+    color: #e8321e;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: font-weight 1s ease-out;
+}
+
+.row,
+.grid-element, .grid-element-left, .grid-element-center, .grid-element-right {
+    flex: 1;
+    /* add transitions for smooth change of the grid */
+    /* play around with transition time */
+    -webkit-transition: flex 1s ease-out;
+    -moz-transition: flex 1s ease-out;
+    -ms-transition: flex 1s ease-out;
+    -o-transition: flex 1s ease-out;
+    transition: flex 1s ease-out;
+}
+
+.row:hover,
+.grid-element:hover, .grid-element-left:hover, .grid-element-center:hover, .grid-element-right:hover,
+.datatype-fontastic:hover {
+    flex: 10;
+}
+
+.grid-element:hover p, .grid-element-left:hover p, .grid-element-center:hover p, .grid-element-right:hover p,
+.datatype-fontastic:hover {
+    font-weight: 900;
+}
+
+
+/* xs: < 576px — subtle expansion, small text */
+@media (max-width: 575px) {
+    .row:hover,
+    .grid-element:hover, .grid-element-left:hover, .grid-element-center:hover, .grid-element-right:hover,
+    .datatype-fontastic:hover {
+        flex: 10;
+    }
+    p {
+        font-size: clamp(0.5rem, min(100cqw, 100cqh), 4rem);
+    }
+}
+
+/* sm: 576px–767px — moderate expansion, reduced text */
+@media (min-width: 576px) and (max-width: 767px) {
+    .row:hover,
+    .grid-element:hover, .grid-element-left:hover, .grid-element-center:hover, .grid-element-right:hover,
+    .datatype-fontastic:hover {
+        flex: 10;
+    }
+    p {
+        font-size: clamp(0.75rem, min(100cqw, 100cqh), 8rem);
+    }
+}
+
+/* md: 768px–991px — increased expansion, medium text */
+@media (min-width: 768px) and (max-width: 991px) {
+    .row:hover,
+    .grid-element:hover, .grid-element-left:hover, .grid-element-center:hover, .grid-element-right:hover,
+    .datatype-fontastic:hover {
+        flex: 10;
+    }
+    p {
+        font-size: clamp(1rem, min(100cqw, 100cqh), 12rem);
+    }
+}
+
+/* lg+: 992px and up — 1200px, full text */
+@media (min-width: 992px) and (max-width: 1200px) {
+    p {
+        font-size: clamp(2rem, min(100cqw, 100cqh), 14rem);
+    }
+}
+
+/* xlg+: 992px and up — full expansion, full text */
+@media (min-width: 1201px) {
+    p {
+        font-size: clamp(2rem, min(100cqw, 100cqh), 20rem);
+    }
+}
