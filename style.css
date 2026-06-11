@@ -195,3 +195,32 @@ p {
         font-size: clamp(2rem, min(100cqw, 100cqh), 20rem);
     }
 }
+
+/* md and below: switch from hover to click (focus) */
+@media (max-width: 991px) {
+    /* disable hover expansion */
+    .row:hover,
+    .grid-element:hover, .grid-element-left:hover, .grid-element-center:hover, .grid-element-right:hover,
+    .datatype-fontastic:hover {
+        flex: 1;
+    }
+    .grid-element:hover p, .grid-element-left:hover p, .grid-element-center:hover p, .grid-element-right:hover p {
+        font-weight: 100;
+    }
+
+    /* click (focus) expansion */
+    .row:focus-within {
+        flex: 10;
+    }
+    .grid-element:focus, .grid-element-left:focus, .grid-element-center:focus, .grid-element-right:focus {
+        flex: 10;
+    }
+    .grid-element:focus p, .grid-element-left:focus p, .grid-element-center:focus p, .grid-element-right:focus p {
+        font-weight: 900;
+    }
+
+    .grid-element, .grid-element-left, .grid-element-center, .grid-element-right {
+        cursor: pointer;
+        outline: none;
+    }
+}
