@@ -10,46 +10,88 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <button type="button" id="togglePanelBtn" class="toggle-panel-btn" aria-expanded="true" aria-controls="controlPanel">⚙</button>
+
+    <div id="controlPanel" class="control-panel">
+      <h2>Display</h2>
+      <fieldset>
+        <legend>Version</legend>
+        <label>
+          <input type="radio" name="version" value="v1" checked>
+          1 — Amarillo
+        </label>
+        <label>
+          <input type="radio" name="version" value="v2">
+          2 — Cafe
+        </label>
+        <label>
+          <input type="radio" name="version" value="v3">
+          3 — Amarillo + gap
+        </label>
+        <label>
+          <input type="radio" name="version" value="v4">
+          4 — Cafe + gap
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gap size (versions 3–4)</legend>
+        <div class="row-flex">
+          <input type="range" id="gapSlider" min="10" max="80" step="1" value="10" disabled>
+          <span class="gap-value" id="gapValue">10px</span>
+        </div>
+      </fieldset>
+    </div>
+
     <main>
-      <div class="container">
-  
+      <div class="container" data-version="v1">
+
   <!-- row 1 -->
   <div class="row">
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">QUE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">SE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">PUEDA</p>
-    </div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-01.png'); --img-cafe: url('assets/cafe-slice-01.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-05.png'); --img-cafe: url('assets/cafe-slice-05.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-09.png'); --img-cafe: url('assets/cafe-slice-09.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-13.png'); --img-cafe: url('assets/cafe-slice-13.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-17.png'); --img-cafe: url('assets/cafe-slice-17.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-21.png'); --img-cafe: url('assets/cafe-slice-21.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-25.png'); --img-cafe: url('assets/cafe-slice-25.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-29.png'); --img-cafe: url('assets/cafe-slice-29.png');"></div>
   </div>
 
   <!-- row 2 -->
   <div class="row">
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">QUE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">SE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">PUEDA</p>
-    </div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-02.png'); --img-cafe: url('assets/cafe-slice-02.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-06.png'); --img-cafe: url('assets/cafe-slice-06.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-10.png'); --img-cafe: url('assets/cafe-slice-10.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-14.png'); --img-cafe: url('assets/cafe-slice-14.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-18.png'); --img-cafe: url('assets/cafe-slice-18.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-22.png'); --img-cafe: url('assets/cafe-slice-22.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-26.png'); --img-cafe: url('assets/cafe-slice-26.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-30.png'); --img-cafe: url('assets/cafe-slice-30.png');"></div>
   </div>
 
   <!-- row 3 -->
   <div class="row">
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">QUE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">SE</p>
-    </div>
-    <div class="grid-element" tabindex="0">
-        <p class="datatype-fontastic">PUEDA</p>
-    </div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-03.png'); --img-cafe: url('assets/cafe-slice-03.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-07.png'); --img-cafe: url('assets/cafe-slice-07.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-11.png'); --img-cafe: url('assets/cafe-slice-11.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-15.png'); --img-cafe: url('assets/cafe-slice-15.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-19.png'); --img-cafe: url('assets/cafe-slice-19.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-23.png'); --img-cafe: url('assets/cafe-slice-23.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-27.png'); --img-cafe: url('assets/cafe-slice-27.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-31.png'); --img-cafe: url('assets/cafe-slice-31.png');"></div>
+  </div>
+
+  <!-- row 4 -->
+  <div class="row">
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-04.png'); --img-cafe: url('assets/cafe-slice-04.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-08.png'); --img-cafe: url('assets/cafe-slice-08.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-12.png'); --img-cafe: url('assets/cafe-slice-12.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-16.png'); --img-cafe: url('assets/cafe-slice-16.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-20.png'); --img-cafe: url('assets/cafe-slice-20.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-24.png'); --img-cafe: url('assets/cafe-slice-24.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-28.png'); --img-cafe: url('assets/cafe-slice-28.png');"></div>
+    <div class="grid-element" tabindex="0" style="--img-amarillo: url('assets/amarillo-slice-32.png'); --img-cafe: url('assets/cafe-slice-32.png');"></div>
   </div>
 
 </div>
@@ -57,5 +99,44 @@
 
 
     </main>
+
+    <script>
+      const container = document.querySelector('.container');
+      const toggleBtn = document.getElementById('togglePanelBtn');
+      const panel = document.getElementById('controlPanel');
+      const gapSlider = document.getElementById('gapSlider');
+      const gapValue = document.getElementById('gapValue');
+      const versionRadios = document.querySelectorAll('input[name="version"]');
+
+      function applyVersion(version) {
+        container.dataset.version = version;
+        gapSlider.disabled = version !== 'v3' && version !== 'v4';
+      }
+
+      versionRadios.forEach((radio) => {
+        radio.addEventListener('change', (e) => {
+          if (e.target.checked) applyVersion(e.target.value);
+        });
+      });
+
+      gapSlider.addEventListener('input', (e) => {
+        const px = `${e.target.value}px`;
+        container.style.setProperty('--gap-size', px);
+        gapValue.textContent = px;
+      });
+
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = panel.hasAttribute('hidden');
+        if (isHidden) {
+          panel.removeAttribute('hidden');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          panel.setAttribute('hidden', '');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      applyVersion('v1');
+    </script>
   </body>
 </html>
